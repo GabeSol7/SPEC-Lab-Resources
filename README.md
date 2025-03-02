@@ -1,7 +1,5 @@
 # **SPEC Lab Resources**  
 
----
-
 ## **Academic and Professional Development**  
 
 Welcome to the **SPEC Lab Resources** repository! 🎉  
