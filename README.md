@@ -4,7 +4,7 @@
 
 Welcome to the **SPEC Lab Resources** repository! 🎉  
 
-If you’re here, you’re probably looking for resources to help navigate research, coding, writing, or career development—and you’re in the right place! This collection is designed to **support members of USC’s Security and Political Economy (SPEC) Lab** (and really, any student looking to level up their academic and professional journey).  
+If you’re here, you’re probably looking for resources to help navigate research, coding, writing, or career development—and you’re in the right place! No matter where you are in your research journey—whether you’re an undergraduate, an early-career researcher, or part of a lab—this collection is here to support you!
 
 Think of this as your go-to library for everything from **finding research opportunities** to **writing academic papers**, **coding in R and Python**, **preparing grad school applications**, and even **figuring out how to send a well-crafted professional email** (because yes, that matters too).  
 
