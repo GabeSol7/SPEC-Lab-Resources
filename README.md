@@ -60,6 +60,6 @@ This is a **living, evolving** resource, and we’d love for you to be a part of
 ## **📞 Contact**  
 For questions, suggestions, or just to say hi, contact [SPEC Lab](mailto:uscspeclab@gmail.com).  
 
----
-
 Hope this helps, and happy researching! 🚀
+
+---
