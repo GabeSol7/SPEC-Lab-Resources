@@ -1,0 +1,138 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Academic Cover Letter Template using newlfm Class
+% 
+% This template is designed for academic job applications, particularly
+% for faculty positions. Students can customize all sections marked with
+% "EDIT:" comments to personalize their cover letter.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Document class declaration
+% [10pt] - Sets the font size to 10pt
+% [stdletter] - Uses standard letter format
+% [dateno] - Includes the date but no letter number
+\documentclass[10pt,stdletter,dateno]{newlfm}
+
+% PACKAGES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{url}  % Package for formatting URLs
+
+% LAYOUT SETTINGS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% These settings control the appearance and spacing of the letter
+\widowpenalty=1000  % Prevents widow lines (single lines at the top of a page)
+\clubpenalty=1000   % Prevents orphan lines (single lines at the bottom of a page)
+
+% newlfm specific formatting parameters
+\newlfmP{headermarginskip=20pt}  % Space between header and content
+\newlfmP{sigsize=50pt}           % Size of the signature area
+\newlfmP{dateskipafter=20pt}     % Space after the date
+\newlfmP{addrfromphone}          % Include phone in sender's address
+\newlfmP{addrfromemail}          % Include email in sender's address
+
+% Labels for contact information
+\PhrPhone{Phone}  % Label for phone number
+\PhrEmail{Email}  % Label for email address
+
+% SENDER INFORMATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% EDIT: Replace with your full name
+\namefrom{Jane D.\ Smith}
+
+% EDIT: Replace with your address and today's date
+% Note the \today command automatically inserts the current date
+\addrfrom{%
+    \today\\[10pt]  % Current date with 10pt space after
+    123 Science Building\\
+    456 University Avenue\\
+    Anytown, ST 12345
+}
+
+% EDIT: Replace with your phone number
+\phonefrom{555-123-4567}
+
+% EDIT: Replace with your email address
+\emailfrom{jdsmith@university.edu}
+
+% RECIPIENT INFORMATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% EDIT: Replace with the recipient's address details
+\addrto{%
+Faculty Search Committee\\
+Department of Computer Science\\
+Example University\\
+Collegetown, ST 98765}
+
+% LETTER FORMATTING
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% EDIT: Change greeting as appropriate
+\greetto{To Whom It May Concern,}
+
+% EDIT: Change closing as appropriate
+\closeline{Sincerely,}
+
+% DOCUMENT BODY
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{newlfm}
+
+% PARAGRAPH 1: Introduction and current status
+% EDIT: Customize to state the position you're applying for, your current 
+% academic status, and why you're interested in the position
+I am writing to apply for the position of assistant
+professor in Example University's Computer Science Department.  I plan to receive my
+Ph.D.\ degree from State University at
+Capital City in Summer of 20XX.  My adviser is
+Prof.\ Robert J.\ Johnson, and my general areas of interest
+include artificial intelligence and machine learning.
+Having many friends and family in the area, I would be
+most enthused to return to the Midwest permanently by accepting
+a position at your institution.
+
+% PARAGRAPH 2: Research focus and accomplishments
+% EDIT: Describe your research focus, major contributions, and significant publications
+In my graduate work, I focus on the design of
+deep learning models and transfer learning techniques.
+More specifically, I have explored various approaches at
+multiple problem domains to effectively improve
+the performance of natural language processing.  In computer vision,
+my work was the first to propose leveraging multi-modal learning
+for medical image analysis.  My research appears in 
+the \textit{Journal of Machine Learning Research} journal as
+well as \textit{NeurIPS 20XX} and \textit{CVPR 20XX},
+prestigious conferences in the areas of machine learning and computer vision,
+respectively.
+
+% PARAGRAPH 3: Materials included with application and online resources
+% EDIT: List the materials included with your application and any online resources
+Enclosed is my curriculum vitae (including a list of
+publications), contact information for my references, a research
+statement, and a teaching statement.  All of my publications and
+presentations are available at:
+\url{http://www.university.edu/~jdsmith/publications/}
+
+% CLOSING PARAGRAPH: Thank you and next steps
+% EDIT: Standard closing paragraph, can be customized as needed
+Please let me know if there are any other materials
+or information that will assist you in processing my application.
+Thank you for your consideration.  I look forward to
+hearing from you.
+
+\end{newlfm}
+\end{document}
+
+% HELPFUL TIPS:
+% -------------
+% 1. The newlfm class handles all the formatting of the letter automatically,
+%    including the placement of the date, address, greeting, and signature.
+%
+% 2. Use "\" after periods that don't end a sentence (like after abbreviations
+%    or initials) to get proper spacing.
+%
+% 3. The \\ command creates a line break, while \\[10pt] creates a line break
+%    with additional vertical space (10pt in this case).
+%
+% 4. You may need to install the 'newlfm' package if you don't already have it.
+%    Most LaTeX distributions include it, or it can be installed through your
+%    TeX package manager.
+%
+% 5. For digital submission, compile this document to PDF using pdflatex.
