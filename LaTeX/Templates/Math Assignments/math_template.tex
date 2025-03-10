@@ -1,0 +1,679 @@
+% =========================================================
+% COMPREHENSIVE LATEX TEMPLATE FOR UNDERGRADUATE MATHEMATICS
+% USC SPEC Lab Resource Guide
+% =========================================================
+
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[margin=1in]{geometry} % Standard margin
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx} % Times New Roman-like font
+\usepackage{titlesec} % Section formatting
+\usepackage{enumitem} % Better list formatting
+\usepackage{booktabs} % For tables
+\usepackage{graphicx} % For images
+\usepackage{fancyhdr} % Header/Footer
+\usepackage{hyperref} % Links
+\usepackage{xcolor}
+
+% ----- Define USC/SPEC Lab Colors -----
+\definecolor{burgundycardinal}{RGB}{128, 0, 0}
+\definecolor{antiquegold}{RGB}{153, 124, 21}
+\definecolor{richcharcoal}{RGB}{54, 54, 54}
+
+% ----- Title and Section Formatting -----
+\titleformat{\section}{\color{burgundycardinal}\large\bfseries}{}{0em}{}
+\titleformat{\subsection}{\color{burgundycardinal}\normalsize\bfseries}{}{0em}{}
+\titlespacing*{\section}{0pt}{2ex plus 1ex minus .2ex}{1ex plus .2ex}
+
+% ----- Compact Lists -----
+\setlist[itemize]{leftmargin=*, itemsep=2pt, parsep=0pt, topsep=2pt}
+\setlist[enumerate]{leftmargin=*, itemsep=2pt, parsep=0pt, topsep=2pt}
+
+% ----- Header and Footer -----
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.5pt}
+\fancyfoot[C]{\textcolor{richcharcoal}{USC SPEC Lab Resource Guide}}
+\fancyfoot[R]{\textcolor{burgundycardinal}{\thepage}}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=antiquegold,
+    filecolor=antiquegold,
+    urlcolor=antiquegold,
+    citecolor=antiquegold,
+    pdftitle={Comprehensive LaTeX Template for Undergraduate Mathematics},
+    pdfauthor={Your Name},
+}
+
+% ----- Essential Packages for Mathematics -----
+\usepackage{amsmath}    % Advanced math formatting
+\usepackage{amssymb}    % Additional math symbols
+\usepackage{amsfonts}   % Mathematical fonts
+\usepackage{mathtools}  % Extensions for amsmath
+\usepackage{amsthm}     % For theorem environments
+
+% ----- Additional Useful Packages -----
+\usepackage{tcolorbox}  % For colored boxes
+\usepackage{tikz}       % For diagrams
+\usepackage{float}      % Better figure positioning
+
+% ----- Custom Theorem Environments -----
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+
+\renewcommand{\qedsymbol}{$\blacksquare$}
+
+% ----- Custom Commands for Math Notation -----
+\newcommand{\R}{\mathbb{R}}         % Real numbers
+\newcommand{\Z}{\mathbb{Z}}         % Integers
+\newcommand{\N}{\mathbb{N}}         % Natural numbers
+\newcommand{\Q}{\mathbb{Q}}         % Rational numbers
+\newcommand{\C}{\mathbb{C}}         % Complex numbers
+\newcommand{\set}[1]{\{#1\}}        % Set notation
+\newcommand{\abs}[1]{\left|#1\right|}  % Absolute value
+\newcommand{\norm}[1]{\left\|#1\right\|}  % Norm
+\newcommand{\innerp}[2]{\langle #1, #2 \rangle}  % Inner product
+
+% ----- Custom Commands for Operators -----
+\DeclareMathOperator{\lcm}{lcm}     % Least common multiple
+\DeclareMathOperator{\gcd}{gcd}     % Greatest common divisor
+
+% ----- Custom Boxes for Tips, Notes, and Warnings -----
+\newtcolorbox{tipbox}{colback=antiquegold!10, colframe=antiquegold, title=Tip}
+\newtcolorbox{notebox}{colback=burgundycardinal!10, colframe=burgundycardinal, title=Note}
+\newtcolorbox{warningbox}{colback=burgundycardinal!20, colframe=antiquegold, title=Warning}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DOCUMENT CONTENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{center}
+    \vspace*{0.5cm}
+    {\color{burgundycardinal} \LARGE \textbf{Comprehensive LaTeX Template for Undergraduate Mathematics}}
+    
+    \vspace{0.2cm}
+    {\color{richcharcoal} \large For Social Science Graduate Programs and Data Science Careers}
+    
+    \vspace{0.3cm}
+    \includegraphics[width=0.3\textwidth]{img/logo.png}
+    
+    \vspace{0.2cm}
+    {\small \textit{A Resource Guide for Undergraduate Students and Research Assistants}}
+    
+    \vspace{0.2cm}
+    {\small \textcolor{richcharcoal}{USC SPEC Lab | \today}}
+\end{center}
+
+\vspace{2em}
+
+% =========================================================
+% INTRODUCTION SECTION
+% =========================================================
+\section*{Introduction to This Template}
+
+This document serves as both a template and a guide for typesetting mathematical documents using \LaTeX. It covers basic structures, mathematical notation, theorems, proofs, and other elements commonly used in undergraduate mathematics.
+
+\begin{notebox}
+Throughout this template, you'll find explanatory notes like this one that provide additional context and tips for working with \LaTeX.
+\end{notebox}
+
+\begin{tipbox}
+Most \LaTeX\ editors support auto-completion. Try typing a backslash (\\) followed by the first few letters of a command to see available options.
+\end{tipbox}
+
+% =========================================================
+% BASIC MATHEMATICS NOTATION
+% =========================================================
+\section{Basic Mathematical Notation}
+
+This section demonstrates how to typeset common mathematical expressions.
+
+\subsection{Inline vs. Display Mathematics}
+
+Mathematics can be written inline within text using \verb|$...$| or as displayed equations using \verb|\[...\]| or the \verb|equation| environment.
+
+Inline math example: The quadratic formula $x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$ gives solutions to $ax^2 + bx + c = 0$.
+
+Display math example:
+\[
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\]
+
+Numbered equation:
+\begin{equation}
+    E = mc^2
+\end{equation}
+
+\begin{notebox}
+Use inline math for simple expressions that fit naturally within text. Use display math for complex expressions or those you want to emphasize.
+\end{notebox}
+
+\subsection{Common Mathematical Symbols}
+
+\subsubsection{Arithmetic Operations}
+\begin{align}
+    a + b &= \text{addition} \\
+    a - b &= \text{subtraction} \\
+    a \times b \text{ or } a \cdot b &= \text{multiplication} \\
+    a \div b \text{ or } \frac{a}{b} &= \text{division} \\
+    a^b &= \text{exponentiation} \\
+    \sqrt{a} &= \text{square root} \\
+    \sqrt[n]{a} &= \text{nth root}
+\end{align}
+
+\subsubsection{Relations}
+\begin{align}
+    a = b &\quad \text{equality} \\
+    a \neq b &\quad \text{inequality} \\
+    a < b &\quad \text{less than} \\
+    a > b &\quad \text{greater than} \\
+    a \leq b &\quad \text{less than or equal to} \\
+    a \geq b &\quad \text{greater than or equal to} \\
+    a \approx b &\quad \text{approximately equal to} \\
+    a \sim b &\quad \text{similar to} \\
+    a \propto b &\quad \text{proportional to}
+\end{align}
+
+\subsubsection{Set Notation}
+\begin{align}
+    a \in A &\quad \text{element of} \\
+    a \notin A &\quad \text{not an element of} \\
+    A \subset B &\quad \text{subset of} \\
+    A \subseteq B &\quad \text{subset of or equal to} \\
+    A \cup B &\quad \text{union} \\
+    A \cap B &\quad \text{intersection} \\
+    A \setminus B &\quad \text{set difference} \\
+    \emptyset &\quad \text{empty set} \\
+    A \times B &\quad \text{Cartesian product}
+\end{align}
+
+\subsubsection{Number Sets}
+\begin{align}
+    \N &= \{1, 2, 3, \ldots\} \quad \text{natural numbers} \\
+    \Z &= \{\ldots, -2, -1, 0, 1, 2, \ldots\} \quad \text{integers} \\
+    \Q &= \{\frac{p}{q} : p, q \in \Z, q \neq 0\} \quad \text{rational numbers} \\
+    \R &= \text{real numbers} \\
+    \C &= \{a + bi : a, b \in \R, i^2 = -1\} \quad \text{complex numbers}
+\end{align}
+
+\subsubsection{Logical Symbols}
+\begin{align}
+    p \land q &\quad \text{logical AND} \\
+    p \lor q &\quad \text{logical OR} \\
+    \neg p &\quad \text{logical NOT} \\
+    p \Rightarrow q &\quad \text{implication (if $p$ then $q$)} \\
+    p \Leftrightarrow q &\quad \text{equivalence (if and only if)} \\
+    \forall x &\quad \text{for all $x$} \\
+    \exists x &\quad \text{there exists $x$} \\
+    \nexists x &\quad \text{there does not exist $x$}
+\end{align}
+
+\begin{tipbox}
+Define your own commands for frequently used symbols to save time and ensure consistency. See the preamble of this template for examples.
+\end{tipbox}
+
+% =========================================================
+% ADVANCED EQUATION FORMATTING
+% =========================================================
+\section{Advanced Equation Formatting}
+
+\subsection{Multi-line Equations}
+
+The \verb|align| environment is useful for multi-line equations, especially when you want to align them at a specific point (typically equals signs):
+
+\begin{align}
+    (a + b)^2 &= (a + b)(a + b) \\
+    &= a^2 + ab + ba + b^2 \\
+    &= a^2 + 2ab + b^2
+\end{align}
+
+\begin{notebox}
+Use the \& symbol to specify alignment points in multi-line equations.
+\end{notebox}
+
+For equations without alignment points, use the \verb|gather| environment:
+
+\begin{gather}
+    f(x) = ax^2 + bx + c \\
+    g(x) = dx^3 + ex^2 + fx + g \\
+    h(x) = \sin(x) + \cos(x)
+\end{gather}
+
+\subsection{Cases}
+
+The \verb|cases| environment is perfect for piecewise functions:
+
+\begin{equation}
+    |x| = 
+    \begin{cases}
+        x & \text{if } x \geq 0 \\
+        -x & \text{if } x < 0
+    \end{cases}
+\end{equation}
+
+\subsection{Matrices}
+
+\LaTeX\ provides several environments for matrices:
+
+\subsubsection{Basic Matrix}
+\begin{equation}
+    A = 
+    \begin{pmatrix}
+        a_{11} & a_{12} & a_{13} \\
+        a_{21} & a_{22} & a_{23} \\
+        a_{31} & a_{32} & a_{33}
+    \end{pmatrix}
+\end{equation}
+
+\subsubsection{Matrix with Square Brackets}
+\begin{equation}
+    B = 
+    \begin{bmatrix}
+        b_{11} & b_{12} \\
+        b_{21} & b_{22}
+    \end{bmatrix}
+\end{equation}
+
+\subsubsection{Matrix with Curly Braces}
+\begin{equation}
+    C = 
+    \begin{Bmatrix}
+        c_{11} & c_{12} \\
+        c_{21} & c_{22}
+    \end{Bmatrix}
+\end{equation}
+
+\subsubsection{Matrix with Vertical Bars (Determinant)}
+\begin{equation}
+    |D| = 
+    \begin{vmatrix}
+        d_{11} & d_{12} \\
+        d_{21} & d_{22}
+    \end{vmatrix}
+    = d_{11}d_{22} - d_{12}d_{21}
+\end{equation}
+
+\begin{warningbox}
+Be careful with large matrices! They can easily extend beyond page margins. Consider using smaller font sizes or breaking them into smaller components when necessary.
+\end{warningbox}
+
+\subsection{Limits, Sums, and Integrals}
+
+\subsubsection{Limits}
+\begin{equation}
+    \lim_{x \to 0} \frac{\sin x}{x} = 1
+\end{equation}
+
+\subsubsection{Sums}
+\begin{equation}
+    \sum_{i=1}^{n} i = \frac{n(n+1)}{2}
+\end{equation}
+
+\subsubsection{Products}
+\begin{equation}
+    \prod_{i=1}^{n} i = n!
+\end{equation}
+
+\subsubsection{Integrals}
+\begin{equation}
+    \int_{a}^{b} f(x) \, dx
+\end{equation}
+
+\begin{equation}
+    \oint_C f(z) \, dz = 2\pi i \sum \text{Res}(f, a_k)
+\end{equation}
+
+\begin{equation}
+    \iint_D f(x,y) \, dx \, dy
+\end{equation}
+
+\begin{equation}
+    \iiint_E f(x,y,z) \, dx \, dy \, dz
+\end{equation}
+
+\begin{tipbox}
+Notice the \verb|\,| command before \verb|dx| in integrals. This adds a small space that improves readability.
+\end{tipbox}
+
+% =========================================================
+% THEOREMS, PROOFS, AND DEFINITIONS
+% =========================================================
+\section{Theorems, Proofs, and Definitions}
+
+Mathematics papers and assignments often include theorems, lemmas, proofs, and definitions. \LaTeX\ provides structured environments for these elements.
+
+\subsection{Theorem Example}
+
+\begin{theorem}[Pythagorean Theorem]
+    In a right triangle with sides $a$, $b$, and hypotenuse $c$, we have
+    \begin{equation}
+        a^2 + b^2 = c^2
+    \end{equation}
+\end{theorem}
+
+\begin{proof}
+    Consider a right triangle with sides $a$, $b$, and hypotenuse $c$. We can place this triangle in a coordinate system such that one vertex is at the origin $(0,0)$, another at $(a,0)$, and the third at $(0,b)$.
+    
+    The distance from $(0,0)$ to $(a,b)$ is given by the distance formula:
+    \begin{align}
+        c &= \sqrt{(a-0)^2 + (b-0)^2} \\
+        c &= \sqrt{a^2 + b^2}
+    \end{align}
+    
+    Squaring both sides:
+    \begin{equation}
+        c^2 = a^2 + b^2
+    \end{equation}
+\end{proof}
+
+\begin{lemma}
+    Let $a$, $b$, and $c$ be positive real numbers. If $a < b$ and $b < c$, then $a < c$.
+\end{lemma}
+
+\begin{proof}
+    Since $a < b$, we have $b - a > 0$.
+    
+    Since $b < c$, we have $c - b > 0$.
+    
+    Adding these inequalities:
+    \begin{align}
+        (b - a) + (c - b) &> 0 \\
+        c - a &> 0
+    \end{align}
+    
+    Therefore, $a < c$.
+\end{proof}
+
+\subsection{Definition Example}
+
+\begin{definition}[Continuous Function]
+    A function $f: X \to Y$ between topological spaces is continuous if for every open set $V \subset Y$, the preimage $f^{-1}(V) \subset X$ is open.
+\end{definition}
+
+\begin{remark}
+    For functions $f: \R \to \R$, this is equivalent to the $\epsilon$-$\delta$ definition: $f$ is continuous at $a$ if for every $\epsilon > 0$, there exists a $\delta > 0$ such that for all $x$ with $|x - a| < \delta$, we have $|f(x) - f(a)| < \epsilon$.
+\end{remark}
+
+\begin{example}
+    The function $f(x) = x^2$ is continuous on $\R$. To verify this using the $\epsilon$-$\delta$ definition, let $\epsilon > 0$ be given. We need to find $\delta > 0$ such that $|x^2 - a^2| < \epsilon$ whenever $|x - a| < \delta$.
+    
+    Note that $|x^2 - a^2| = |x + a||x - a|$. If we restrict to $|x - a| < 1$, then $|x| < |a| + 1$, so $|x + a| < 2|a| + 1$.
+    
+    Thus, we can choose $\delta = \min\{1, \frac{\epsilon}{2|a| + 1}\}$.
+\end{example}
+
+\begin{tipbox}
+The theorem environments are all numbered automatically. To reference them elsewhere in your document, add a label with \verb|\label{name}| and then refer to it with \verb|\ref{name}|.
+\end{tipbox}
+
+% =========================================================
+% STRUCTURING HOMEWORK ASSIGNMENTS
+% =========================================================
+\section{Structuring Homework Assignments}
+
+For most undergraduate mathematics courses, homework assignments follow a simple structure with numbered problems and subproblems.
+
+\subsection{Basic Problem Structure}
+
+\begin{tcolorbox}[title=Problem 1]
+    Prove that for any integer $n$, if $n^2$ is even, then $n$ is even.
+\end{tcolorbox}
+
+\begin{proof}
+    We'll prove the contrapositive: if $n$ is odd, then $n^2$ is odd.
+    
+    Let $n$ be odd. Then $n = 2k + 1$ for some integer $k$.
+    
+    Now, $n^2 = (2k + 1)^2 = 4k^2 + 4k + 1 = 2(2k^2 + 2k) + 1$
+    
+    Since $2k^2 + 2k$ is an integer, $n^2$ is odd by definition.
+    
+    Therefore, if $n^2$ is even, then $n$ must be even.
+\end{proof}
+
+\begin{tcolorbox}[title=Problem 2]
+    Solve the following system of equations:
+    \begin{align}
+        3x + 2y &= 7 \\
+        x - y &= 1
+    \end{align}
+\end{tcolorbox}
+
+\textbf{Solution:}
+
+From the second equation, we have $x = y + 1$. Substituting into the first equation:
+\begin{align}
+    3(y + 1) + 2y &= 7 \\
+    3y + 3 + 2y &= 7 \\
+    5y + 3 &= 7 \\
+    5y &= 4 \\
+    y &= \frac{4}{5}
+\end{align}
+
+Now we can find $x$:
+\begin{align}
+    x &= y + 1 \\
+    x &= \frac{4}{5} + 1 \\
+    x &= \frac{4}{5} + \frac{5}{5} \\
+    x &= \frac{9}{5}
+\end{align}
+
+Therefore, the solution is $x = \frac{9}{5}$ and $y = \frac{4}{5}$.
+
+\subsection{Problem with Multiple Parts}
+
+\begin{tcolorbox}[title=Problem 3]
+    Consider the function $f(x) = x^3 - 3x + 1$.
+    \begin{enumerate}[label=(\alph*)]
+        \item Find all critical points of $f$.
+        \item Determine whether each critical point is a local maximum, local minimum, or neither.
+        \item Find the global maximum and minimum of $f$ on the interval $[-2, 2]$.
+    \end{enumerate}
+\end{tcolorbox}
+
+\textbf{Solution:}
+
+\begin{enumerate}[label=(\alph*)]
+    \item To find the critical points, we calculate $f'(x)$ and set it equal to zero:
+    \begin{align}
+        f'(x) &= 3x^2 - 3 \\
+        3x^2 - 3 &= 0 \\
+        3x^2 &= 3 \\
+        x^2 &= 1 \\
+        x &= \pm 1
+    \end{align}
+    
+    So, the critical points are $x = 1$ and $x = -1$.
+    
+    \item To determine the nature of these critical points, we compute $f''(x)$:
+    \begin{align}
+        f''(x) = 6x
+    \end{align}
+    
+    For $x = 1$, we have $f''(1) = 6 > 0$, so $x = 1$ is a local minimum.
+    
+    For $x = -1$, we have $f''(-1) = -6 < 0$, so $x = -1$ is a local maximum.
+    
+    \item To find the global extrema on $[-2, 2]$, we evaluate $f$ at the critical points and endpoints:
+    \begin{align}
+        f(-2) &= (-2)^3 - 3(-2) + 1 = -8 + 6 + 1 = -1 \\
+        f(-1) &= (-1)^3 - 3(-1) + 1 = -1 + 3 + 1 = 3 \\
+        f(1) &= (1)^3 - 3(1) + 1 = 1 - 3 + 1 = -1 \\
+        f(2) &= (2)^3 - 3(2) + 1 = 8 - 6 + 1 = 3
+    \end{align}
+    
+    Therefore, the global maximum is $3$, occurring at $x = -1$ and $x = 2$, and the global minimum is $-1$, occurring at $x = -2$ and $x = 1$.
+\end{enumerate}
+
+\begin{tipbox}
+The \verb|enumerate| environment with the \verb|enumitem| package gives you great flexibility in formatting lists. Use the \verb|label| option to customize the numbering style.
+\end{tipbox}
+
+% =========================================================
+% ADDING FIGURES AND DIAGRAMS
+% =========================================================
+\section{Adding Figures and Diagrams}
+
+\subsection{Including External Images}
+
+To include an external image, use the \verb|\includegraphics| command:
+
+\begin{figure}[H] % The [H] option forces the figure to appear exactly here
+    \centering
+    \includegraphics[width=0.6\textwidth]{example-image} % Replace with your image file
+    \caption{Example figure caption explaining the image context and significance.}
+    \label{fig:example}
+\end{figure}
+
+You can reference figures using their labels: See Figure \ref{fig:example}.
+
+\begin{notebox}
+The \verb|example-image| is a built-in placeholder image provided by the \verb|graphicx| package. Replace it with your actual image file.
+\end{notebox}
+
+\subsection{Creating Diagrams with TikZ}
+
+TikZ is a powerful package for creating diagrams directly within LaTeX:
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        % Coordinate axes
+        \draw[-latex] (-0.5,0) -- (4.5,0) node[right] {$x$};
+        \draw[-latex] (0,-0.5) -- (0,4.5) node[above] {$y$};
+        
+        % Function plot
+        \draw[domain=0:4, smooth, variable=\x, blue, thick] plot ({\x}, {\x*\x/4});
+        
+        % Point on the curve
+        \filldraw[red] (2,1) circle (2pt) node[above right] {$(2,1)$};
+        
+        % Tangent line at x=2
+        \draw[red, dashed] (0,0) -- (4,2);
+        
+        % Label for the function
+        \node at (3,3) {$y = \frac{x^2}{4}$};
+    \end{tikzpicture}
+    \caption{A parabola with its tangent line at $x = 2$.}
+    \label{fig:parabola}
+\end{figure}
+
+\begin{tipbox}
+TikZ has a steep learning curve but is extremely versatile. Start with simple diagrams and gradually explore more commands as needed.
+\end{tipbox}
+
+% =========================================================
+% BIBLIOGRAPHY AND CITATIONS
+% =========================================================
+\section{Bibliography and Citations}
+
+In more advanced mathematics writing, you'll often need to cite references. Here's a basic example using the \verb|thebibliography| environment:
+
+To cite a reference in your text, use the \verb|\cite| command:
+
+As shown by Knuth \cite{knuth1984texbook}, \LaTeX\ is a powerful typesetting system for mathematics.
+
+\begin{thebibliography}{9}
+    \bibitem{knuth1984texbook} Knuth, D. E. (1984). The TeXbook. Addison-Wesley.
+    \bibitem{lamport1994latex} Lamport, L. (1994). \LaTeX: A Document Preparation System. Addison-Wesley.
+    \bibitem{stewart2015calculus} Stewart, J. (2015). Calculus: Early Transcendentals. Cengage Learning.
+\end{thebibliography}
+
+\begin{notebox}
+For more complex documents, consider using BibTeX or BibLaTeX for managing references.
+\end{notebox}
+
+% =========================================================
+% COMMON MISTAKES AND TIPS
+% =========================================================
+\section{Common Mistakes and Tips}
+
+\subsection{Spacing in Math Mode}
+
+\LaTeX\ automatically handles most spacing in mathematical expressions, but sometimes manual adjustments are needed:
+
+\begin{itemize}
+    \item Use \verb|\,| for a thin space: $f(x)\,dx$
+    \item Use \verb|\;| for a medium space: $A\;B$
+    \item Use \verb|\quad| for a larger space: $A\quad B$
+    \item Use \verb|\qquad| for an even larger space: $A\qquad B$
+    \item Use \verb|\!| for a negative thin space (bringing symbols closer): $\int\!\!\!\int$
+\end{itemize}
+
+\subsection{Braces and Brackets}
+
+Use \verb|\left| and \verb|\right| to create automatically sized delimiters:
+
+\begin{equation}
+    \left( \frac{a}{b} \right) \quad
+    \left[ \sum_{i=1}^{n} i^2 \right] \quad
+    \left\{ \frac{1}{1-x} \right\} \quad
+    \left| \frac{x}{y} \right| \quad
+    \left\| \vec{v} \right\|
+\end{equation}
+
+\subsection{Text in Math Mode}
+
+Use \verb|\text{}| for words within mathematical expressions:
+
+\begin{equation}
+    f(x) = 
+    \begin{cases}
+        x^2 & \text{if $x \geq 0$} \\
+        -x^2 & \text{if $x < 0$}
+    \end{cases}
+\end{equation}
+
+\begin{warningbox}
+Never use normal text directly in math mode! Always wrap it with \verb|\text{}| to ensure proper spacing and font consistency.
+\end{warningbox}
+
+\subsection{Multi-letter Variables and Functions}
+
+Standard functions should use upright font, while variables use italic:
+
+\begin{itemize}
+    \item Correct: $\sin(x)$, $\log(y)$, $\lim_{x \to 0} f(x)$
+    \item Incorrect: $sin(x)$, $log(y)$
+\end{itemize}
+
+Common mathematical functions have predefined commands:
+\begin{itemize}
+    \item Trigonometric: \verb|\sin|, \verb|\cos|, \verb|\tan|, \verb|\csc|, \verb|\sec|, \verb|\cot|
+    \item Inverse trigonometric: \verb|\arcsin|, \verb|\arccos|, \verb|\arctan|
+    \item Hyperbolic: \verb|\sinh|, \verb|\cosh|, \verb|\tanh|
+    \item Logarithmic and exponential: \verb|\log|, \verb|\ln|, \verb|\exp|
+    \item Others: \verb|\lim|, \verb|\max|, \verb|\min|, \verb|\sup|, \verb|\inf|, \verb|\det|, \verb|\gcd|
+\end{itemize}
+
+For functions not predefined, use \verb|\operatorname{name}| or define your own with \verb|\DeclareMathOperator|.
+
+% =========================================================
+% CONCLUSION
+% =========================================================
+\section{Conclusion}
+
+This template provides a comprehensive starting point for typesetting mathematical documents using \LaTeX. As you become more familiar with the system, you'll discover additional packages and commands that suit your specific needs.
+
+Remember that learning \LaTeX\ is an incremental process. Start with basic documents and gradually incorporate more advanced features as you become comfortable.
+
+\begin{tipbox}
+Practice regularly with small documents before attempting larger projects. When encountering errors, read the error messages carefully—they often provide helpful information for troubleshooting.
+\end{tipbox}
+
+\begin{notebox}
+Online resources like the \LaTeX\ Stack Exchange (\url{https://tex.stackexchange.com/}) and the Overleaf Documentation (\url{https://www.overleaf.com/learn}) are invaluable for learning more advanced techniques and solving specific problems.
+\end{notebox}
+
+% End of document
+\end{document}
