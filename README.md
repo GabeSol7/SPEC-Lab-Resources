@@ -41,7 +41,7 @@ Whether you're thinking about **grad school, fellowships, or just figuring out n
 ### **📄 LaTeX Resources**  
 If you're writing papers or applying for jobs, **a clean, well-formatted document can set you apart.**  
 - 📂 **Guides** – LaTeX usage, bibliography management, and formatting best practices.  
-- 📂 **Templates** – Preformatted LaTeX documents for CVs, research papers, and presentations.  
+- 📂 **Templates** – Preformatted LaTeX documents for CVs, research papers, presentations, and more.  
 
 ### **💻 Software Programming**  
 Technical resources for research computing **because sometimes Excel just isn’t enough.**  
