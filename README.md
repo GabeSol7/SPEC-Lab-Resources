@@ -29,7 +29,7 @@ Professional document formatting made easy
 
 ### **Software Programming** 
 Tools and tutorials for research computing
-- **Statistical Programs** - Resources for Python, R, SQL, and Stata
+- **Statistical Programs** - Resources for Python, R, SQL, and Stata. Please feel free to visit https://www.uscspec.org/applied-data-science-trainings for additional, structured data trainings.
 - **Bibliography Managers** - Guides for EndNote, Mendeley, and Zotero
 
 ---
