@@ -1,63 +1,83 @@
-# **SPEC Lab Resources**  
+# SPEC Lab Resources
 
-## **Academic and Professional Development**  
+## Welcome! 👋
 
-Welcome to the **SPEC Lab Resources** repository! 🎉  
-
-If you’re here, you’re probably looking for resources to help navigate research, coding, writing, or career development—and you’re in the right place! No matter where you are in your research journey—whether you’re an undergraduate, an early-career researcher, or part of a lab—this collection is here to support you!
-
-Think of this as your go-to library for everything from **finding research opportunities** to **writing academic papers**, **coding in R and Python**, **preparing grad school applications**, and even **figuring out how to send a well-crafted professional email** (because yes, that matters too).  
-
-We've pulled together materials based on **real experiences from students and researchers**—so everything here is meant to be **practical, relevant, and useful.** Whether you're deep into your research, applying for fellowships, or just getting started with LaTeX, there’s something here for you.  
-
-Take a look around, **use what you need, and feel free to contribute**!
+This repository is your one-stop shop for academic research resources, grad school/predoc application materials, and professional development tools. Whether you're just starting your research journey or preparing for post-grad opportunities, we've got you covered.
 
 ---
 
-## **📌 About This Repository**  
-This repository serves as a centralized hub for essential resources, including:  
-- **Academic Research** – Guides on literature searching, writing research papers, coding for research, and data management.  
-- **Career Development** – Resources for fellowships, scholarships, and post-graduate opportunities.  
-- **LaTeX Resources** – Templates and guides for research papers, resumes, and professional documents.  
-- **Software Programming** – Tutorials on statistical programs and bibliography managers.  
-- **Miscellaneous** – Additional professional development materials, including email communication tips.  
+## 📁 What's Inside
+
+### **Academic Research** 
+- **Coding for Research** - A simple overview of 'good' data analysis
+- **Data Management** - Best practices for organizing and storing research data
+- **Literature Searching** - How to find and organize academic sources effectively
+- **Writing Papers** - Guidelines for academic writing and citations
+
+### **Grad School & Pre-docs** 
+Your complete toolkit for post-grad applications
+- **Grad Resources** - PhD application guides, recommended coursework lists, and application tracking templates
+- **Pre-doc Resources** - Data task examples, application memos, and position guides
+- **Professional Development** - How to write cold emails to professors, industry resume template, and navigating a PhD course
+- **Featured Guide**: Our comprehensive "Applying to Grad School & Predocs" guide (see main folder)
+
+### **LaTeX** 
+Professional document formatting made easy
+- **Templates** - Ready-to-use templates for CVs, research papers, cover letters, presentations, and resumes
+- **Other Guides** - LaTeX cheat sheet and bibliography management help
+- **Getting Started Guide** - Perfect for LaTeX beginners
+
+### **Software Programming** 
+Tools and tutorials for research computing
+- **Statistical Programs** - Resources for Python, R, SQL, and Stata
+- **Bibliography Managers** - Guides for EndNote, Mendeley, and Zotero
 
 ---
 
-## **📂 Repository Structure**  
+## 🚀 How to Use This Repository
 
-### **📖 Academic Research**
-Resources to help you **conduct research efficiently and effectively.**  
-- 📂 **Coding for Research** – Python and R tutorials for research applications.  
-- 📂 **Data Management** – Best practices for organizing datasets and version control.  
-- 📂 **Literature Searching** – Guides on using Google Scholar, library databases, and other research tools.  
-- 📂 **Writing Papers** – Structuring papers, literature reviews, citations, and annotated bibliographies.  
+1. **Browse by folder** - Each folder is organized by topic. Start with what you need most!
+2. **Download what you need** - All PDFs can be downloaded directly. For LaTeX templates, download all files in a subfolder (except PDFs) to compile properly (e.g., in Overleaf)
+3. **Check back regularly** - We're adding new resources as they come
+4. **Can't find something?** - Open an issue or email us!
+   
+---
 
-### **🎓 Career Development**  
-Whether you're thinking about **grad school, fellowships, or just figuring out next steps,** this section has you covered.  
-- 📂 **Fellowships & Scholarships List** – Funding opportunities for students.  
-- 📂 **Post-Graduate Opportunities** – Information on research positions, grad school, and predoctoral fellowships.  
+## 👥 Contributing & Access
 
-### **📄 LaTeX Resources**  
-If you're writing papers or applying for jobs, **a clean, well-formatted document can set you apart.**  
-- 📂 **Guides** – LaTeX usage, bibliography management, and formatting best practices.  
-- 📂 **Templates** – Preformatted LaTeX documents for CVs, research papers, presentations, and more. To run these files in LaTeX, please download all files (except PDFs) in the respective subfolder in your chosen editor and compile. 
+### Want to Add Resources?
+We love contributions! If you have a resource that helped you, it might help others too.
+- Fork the repository
+- Add your resource to the appropriate folder
+- Submit a pull request with a brief description
+- Or simply email us your suggestions at uscspeclab@gmail.com
 
-### **💻 Software Programming**  
-Technical resources for research computing **because sometimes Excel just isn’t enough.**  
-- 📂 **Bibliography Managers** – Guides on using Zotero, Mendeley, and BibTeX.  
-- 📂 **Statistical Programs** – Tutorials on statistical tools like R, Stata, and Python.  
-
-### **📌 Miscellaneous**  
-A little bit of everything that **doesn’t quite fit anywhere else but is still important.**  
-- 📄 **Sending Emails** – Best practices for professional email communication.  
+### Need Access to Edit?
+Current SPEC Lab members can request write access by:
+1. Emailing uscspeclab@gmail.com with your GitHub username
+2. Including a brief note about which folders you'll be updating
 
 ---
 
-## **💡 Contributing**  
-This is a **living, evolving** resource, and we’d love for you to be a part of it. If you have a guide, template, or tip that you think would help others, **feel free to submit a pull request!** Even if you just notice something that could be improved—reach out. Collaboration is what makes research (and life) better.  
+## 📝 Keeping Track of Updates
 
-## **📞 Contact**  
-For questions, suggestions, or just to say hi, contact [SPEC Lab](mailto:uscspeclab@gmail.com).  
+### When You Add Something New:
+1. **Name files clearly** - Use descriptive names (e.g., "Data_Cleaning_Best_Practices.pdf" not "doc1.pdf")
+2. **Update this README** - Add a line in the "Recent Updates" section below
+3. **Add a date** - Include the date in your update note
+
+### Recent Updates
+- [Oct 2025] Added comprehensive Grad School & Predocs application guide
+- *Add your updates here with format: [Month Year] Description*
 
 ---
+
+## 📧 Questions?
+
+- **Email**: uscspeclab@gmail.com
+- **Office**: DMC 301
+- **Website**: https://www.uscspec.org/
+
+---
+
+*Last updated: October 2025*
